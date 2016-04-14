@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <form method="post" class="form-horizontal">
+            {% csrf_token %}
+
+            {% if form.errors.items %}
+                <div class="alert alert-danger">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            {% endif %}
+
+            {% for field in form.visible_fields %}
+                <div class="form-group {% if field.errors %}has-error{% endif %}">
+                    <div class="tooltip-demo">
+                        {% if field.help_text %}
+                            <label class="cursor-lbl col-sm-2 control-label" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{ field.help_text }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+                        {% else %}
+                            <label class="col-sm-2 control-label">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ field }}
+                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+            {% endfor %}
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <!-- <a class="btn btn-white" href="">Cancel</a> -->
+                    <button class="btn btn-primary" type="submit">Enviar y continuar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{ form.media }}
+
+
+

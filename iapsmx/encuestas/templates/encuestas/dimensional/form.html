@@ -1,0 +1,191 @@
+{% load staticfiles %}
+
+{% block head_files %}
+    <!-- Data Tables -->
+    <link href="{% static "css/plugins/slideshow/fullscreenstyle.css" %}" type="text/css" rel="stylesheet">
+    <link href="{% static "css/plugins/iCheck/custom.css" %}" rel="stylesheet">
+
+
+
+{% endblock %}
+
+    <div class="ibox float-e-margins">
+        <div class="ibox-content">
+            <strong style="font-size:25px">Imagen: {{ pk }}/20 </strong>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+
+      <div class="image">
+        <a id='hazClick' rel="gallery" href="{{ MEDIA_URL }}muestra{% if pk == '1' %}1{% else %}2{% endif %}.jpg" >
+          <img src="" >
+        </a>
+
+      </div>
+
+      <div class="image">
+        <a rel="gallery" href="{{ MEDIA_URL }}imagen{% if pk == '1' %}1{% else %}2{% endif %}.jpg">
+          <img src="">
+        </a>
+
+      </div>
+
+    </div>
+
+
+        <form method="post" class="form-horizontal">
+            {% csrf_token %}
+
+            {% if form.errors.items %}
+                <div class="alert alert-danger">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            {% endif %}
+
+
+            {% for field in form.visible_fields %}
+                <div>
+                    {% if field.name == 'activacion' %}
+                        <img src="{{ MEDIA_URL }}SAMarousal.jpg">
+                    {% else %}
+                        <img src="{{ MEDIA_URL }}SAMpleasure.jpg">
+                    {% endif %}
+                </div>
+
+
+                <div class="ibox float-e-margins">
+
+
+
+                        <div class="form-group {% if field.errors %}has-error{% endif %}">
+
+
+                            <div class="tooltip-demo">
+                                {% if field.help_text %}
+                                    <label class="cursor-lbl control-label" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{ field.help_text }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+                                {% else %}
+                                    <label class="control-label">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+                                {% endif %}
+                            </div>
+                            <div class="radio i-checks">
+                                {{ field }}
+                            </div>
+                        </div>
+
+                </div>
+
+
+
+            {% endfor %}
+
+
+        <br>
+        <br>
+            <div class="form-group">
+                <div>
+
+                    <button class="btn btn-primary" type="submit">Enviar y continuar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{ form.media }}
+
+{% block body_files %}
+
+    <!-- slideshow -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{% static 'js/plugins/slideshow/jquery.fullscreenslides.js' %}"></script>
+
+    <script id="sample">
+    $(function(){
+      // initialize the slideshow
+      $('.image img').fullscreenslides();
+
+      // All events are bound to this container element
+      var $container = $('#fullscreenSlideshowContainer');
+
+      $container
+        //This is triggered once:
+        .bind("init", function() {
+
+          $container
+
+            .append('<div class="ui" id="fs-loader">Loading...</div>')
+
+          $('#fs-prev').click(function(){
+
+          });
+
+          $('#fs-next').click(function(){
+
+          });
+
+          $('#fs-close').click(function(){
+
+          });
+
+          setTimeout(function(){
+
+            $container.trigger("nextSlide");
+
+          },5000);
+
+          setTimeout(function(){
+
+            $container.trigger("close");
+
+          },11000);
+
+        })
+        // When a slide starts to load this is called
+        .bind("startLoading", function() {
+          // show spinner
+          $('#fs-loader').show();
+        })
+        // When a slide stops to load this is called:
+        .bind("stopLoading", function() {
+          // hide spinner
+          $('#fs-loader').hide();
+        })
+
+
+        .bind("startOfSlide", function(event, slide) {
+
+        })
+        // before a slide is hidden this is called:
+        .bind("endOfSlide", function(event, slide) {
+          $('#fs-caption').hide();
+        });
+    });
+    </script>
+
+    <script language="JavaScript">
+    window.onload = function(){
+        document.getElementById('hazClick').click();
+    }
+    </script>
+
+
+
+    <!-- iCheck -->
+    <script src="{% static "js/plugins/iCheck/icheck.min.js" %}"></script>
+        <script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green'
+                });
+            });
+        </script>
+
+
+{% endblock %}

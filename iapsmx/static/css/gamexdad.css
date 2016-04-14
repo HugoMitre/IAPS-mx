@@ -1,0 +1,91 @@
+#button-column{
+    width: 130px;
+}
+
+#hide-column{
+    display: none;
+}
+
+.detail-gamexdad > tbody > tr > td:first-child {
+    background-color: #F5F5F6;
+    width: 200px;
+}
+
+#grid-permissions .center-td{
+    text-align: center;
+}
+
+#mayus{
+    color: #d33333;
+}
+
+#span-overflow{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.cursor-lbl{
+    cursor: help;
+}
+
+#td-image-user{
+    width: 100px;
+}
+
+#ibox-title-height{
+    height: 80px;
+}
+
+#span-clear{
+    color: #dfe4ed;
+}
+
+.guideline-element:hover {
+    background-color: #f6f6f6;
+    color: #1ab394;
+    cursor: pointer;
+}
+
+.link-guideline{
+    color: #000000;
+}
+
+.description-guideline{
+    max-height: 70px;
+    overflow:hidden;
+    margin-bottom: 10px;
+}
+
+#div-loader{
+    display:none;
+    margin-top: 10px;
+}
+
+.project-title span {
+    font-size: 14px;
+    color: #676a6c;
+    font-weight: 600;
+}
+
+.nav-element {
+    padding: 10px 0 10px 0;
+}
+
+#current-project{
+    color: inherit;
+    background: white;
+    border: 1px solid #e7eaec;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+#name-project{
+    text-align: center;
+    margin: 15px 0 -10px 0;
+    font-weight: 500;
+}
+
+#modal-guidelines{
+    height: 500px;
+}

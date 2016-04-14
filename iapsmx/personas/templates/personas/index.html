@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+
+{% block title %} Perfil de Persona {% endblock %}
+
+
+{% block body_block %}
+
+    <div class="ibox float-e-margins">
+        <div class="ibox-content">
+            <strong style="font-size:25px">Indicaciones: </strong>
+            <br>
+            <br>
+            <ul>
+                <li style="font-size:20px">Para contestar esta encuesta debes tener más de 18 años y haber nacido en México.</li>
+                <li style="font-size:20px">No pienses mucho las respuestas, sé sincero</li>
+                <li style="font-size:20px">No se puede regresar a la pregunta anterior, así que cada acción cuenta</li>
+            </ul>
+        </div>
+    </div>
+
+    {% include "personas/form.html" %}
+
+{% endblock %}
+
+
+{% block body_files %}
+
+
+{% endblock %}

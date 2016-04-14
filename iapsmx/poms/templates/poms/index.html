@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+
+{% block title %} Perfil de Persona {% endblock %}
+
+
+{% block body_block %}
+
+    <div class="ibox float-e-margins">
+        <div class="ibox-content">
+            <strong style="font-size:25px">Indicaciones: </strong>
+            <br>
+            <br>
+
+            <p style="font-size:20px">
+                Más abajo hay una lista de palabras que describen las sensaciones que tiene la gente. Por favor
+                lee cada una cuidadosamente.Después <strong>HAZ CLIC EN UNA LA OPCIÓN QUE MEJOR DESCRIBA COMO TE
+                HAS SENTIDO EN LA SEMANA PASADA INCLUYENDO EL DIA DE HOY</strong>. Los números significan:
+            </p>
+            <ul>
+                <li style="font-size:20px">0 = nada</li>
+                <li style="font-size:20px">1 = un poco</li>
+                <li style="font-size:20px">2 = Moderadamente</li>
+                <li style="font-size:20px">3 = Bastante</li>
+                <li style="font-size:20px">4 = Muchísimo</li>
+            </ul>
+        </div>
+    </div>
+
+    {% include "poms/form.html" %}
+
+{% endblock %}
+
+
+{% block body_files %}
+
+
+{% endblock %}
