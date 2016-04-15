@@ -10,7 +10,7 @@ class RadioFieldPOMS(RadioFieldRenderer):
     def render(self):
         return format_html_join(
             '',
-            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{0}',
+            '&nbsp;&nbsp;&nbsp;&nbsp;{0}',
             [(force_text(w), ) for w in self],
         )
 
