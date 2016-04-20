@@ -25,6 +25,7 @@ DEBUG = TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
+#ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -57,11 +58,25 @@ WSGI_APPLICATION = 'iapsmx.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+"""
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'iapsmx',
+        'USER': 'iapsmxuser',
+        'PASSWORD': 'hci2016',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
