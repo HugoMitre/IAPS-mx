@@ -12,11 +12,13 @@
     <div class="ibox float-e-margins">
         <div class="ibox-content">
             <strong style="font-size:25px">Imagen: {{ pk }}/20 </strong>
+            <br>
+            <strong style="font-size:15px">Si la imagen no apareció recarga la página o presiona f5 </strong>
         </div>
     </div>
 
 
-    <div class="wrapper">
+    <div class="wrapper" style='display:none;'>
 
       <div class="image">
         <a id='hazClick' rel="gallery" href="{{ MEDIA_URL }}{{ neutra }}.jpg" >
@@ -137,13 +139,13 @@
 
             $container.trigger("nextSlide");
 
-          },5000);
+          },6000);
 
           setTimeout(function(){
 
             $container.trigger("close");
 
-          },11000);
+          },12000);
 
         })
         // When a slide starts to load this is called
