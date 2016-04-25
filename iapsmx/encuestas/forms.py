@@ -26,11 +26,11 @@ class RadioFieldDiscrete(RadioFieldRenderer):
 
 class EncuestaForm(forms.ModelForm):
 
-    CHOICES=[(9,9),(8,8),(7,7),(6,6),(5,5),(4,4),(3,3),(2,2),(1,1)]
+    CHOICES=[(9,'*'),(8,'*'),(7,'*'),(6,'*'),(5,'*'),(4,'*'),(3,'*'),(2,'*'),(1,'*')]
 
 
-    valencia = forms.ChoiceField(label="",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldWithoutULRenderer))
-    activacion = forms.ChoiceField(label="",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldWithoutULRenderer))
+    valencia = forms.ChoiceField(label="Agrado-Desagrado", help_text="¿Qué tanto de agrado o desagrado la imagen anterior según las caras de estas imagenes?", choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldWithoutULRenderer))
+    activacion = forms.ChoiceField(label="Activado-Dormido",help_text="¿Qué tanto te activa o desactiva la imagen anterior según las caras de estas imagenes?", choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldWithoutULRenderer))
 
 
     class Meta:
