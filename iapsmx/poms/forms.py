@@ -28,7 +28,7 @@ class PomsForm(forms.ModelForm):
 
     malhumorado=forms.ChoiceField(label="Malhumorado",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
     fatigado=forms.ChoiceField(label="Fatigado",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
-    energico=forms.ChoiceField(label="Energico",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
+    energico=forms.ChoiceField(label="Enérgico",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
     comprensivo=forms.ChoiceField(label="Comprensivo",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
     nervioso=forms.ChoiceField(label="Nervioso",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
     triste=forms.ChoiceField(label="Triste",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
@@ -52,7 +52,7 @@ class PomsForm(forms.ModelForm):
     vigoroso=forms.ChoiceField(label="Vigoroso",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
     consideradoConDemas=forms.ChoiceField(label="Considerado",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
     inquieto=forms.ChoiceField(label="Inquieto",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
-    melancolico=forms.ChoiceField(label="Melancolico",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
+    melancolico=forms.ChoiceField(label="Melancólico",choices=CHOICES, widget=forms.RadioSelect(renderer=RadioFieldPOMS))
 
 
 

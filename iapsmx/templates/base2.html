@@ -9,14 +9,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{% block title %}{% endblock %} | IAPSMX (1a parte)</title>
+    <title>{% block title %}{% endblock %} | IAPSMX (2a parte)</title>
 
     <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" >
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
 
-     <!-- Toastr style -->
-    <link href="{% static 'css/plugins/toastr/toastr.min.css' %}" rel="stylesheet">
 
     {% block head_files %}{% endblock %}
 
@@ -35,15 +33,6 @@
 
     <div id="wrapper">
 
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="side-menu">
-
-                    {% block menu %} {% endblock %}
-                </ul>
-
-            </div>
-        </nav>
 
         <div id="page-wrapper" class="gray-bg">
 

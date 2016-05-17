@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="Sergio Daniel Bañuelos García" content="">
 
-    <title>IAPS-MX - Experimento evaluación de imagenes (Primera parte)</title>
+    <title>IAPS-MX - Experimento evaluación de imagenes (Segunda Parte)</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static '/inicio/img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" >
@@ -46,12 +46,21 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>IAPS-MX</h1>
-                <h1>PRIMERA PARTE</h1>
-                <h1>IMÁGENES 1-20</h1>
+                <h1>SEGUNDA PARTE</h1>
+                <h1>IMÁGENES 21-40</h1>
                 <hr>
-                <img src="{{ MEDIA_URL }}cimat.png" width="110" height="160">
-                <p style="font-size:25px">¡Ayuda a CIMAT y a la ciencia en México a avanzar evaluando imagenes por medio de este experimento!</p>
-                <a href="{% url 'personas:index' %}" class="btn btn-primary btn-xl page-scroll">Iniciar Experimento</a>
+                <img src="{{ MEDIA_URL }}cimat.png" width="90" height="130">
+                <p style="font-size:25px" >¡Ayuda a la ciencia en México evaluando imagenes por medio de este estudio!</p>
+                <p style="font-size:25px" align="left">Indicaciones:
+                    <br>- Usa una computadora.
+                    <br>- <strong>Contenido explícito</strong> en las imágenes. Debes ser mayor de edad.
+                    <br>- Debes ser mexicano o haber sido criado en México.
+                    <br>- Tiempo estimado 15 min.
+
+                </p>
+
+
+                <a href="{% url 'personas:index' %}" class="btn btn-primary btn-xl page-scroll">Iniciar</a>
             </div>
         </div>
     </header>

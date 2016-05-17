@@ -31,7 +31,7 @@
             <p>Disculpa,la pagina que estas buscando no ha sido encontrada, no existe o tu session expiró.
                 Checa que la dirección URL sea correcta y refresca la página</p>
             <br/>
-            <a class="btn btn-primary" href="{{ request.META.HTTP_REFERER }}"><i class="fa fa-long-arrow-left"></i> Ve a la página anterior</a>
+            <a class="btn btn-primary" onClick="javascript:history.go(-1);"><i class="fa fa-long-arrow-left"></i> Ve a la página anterior</a>
 
 
             <a class="btn btn-primary" href="{% url "personas.views.home" %}"><i class="fa fa-home"></i>Ve a la página de inicio</a>
