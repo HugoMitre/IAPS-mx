@@ -67,7 +67,7 @@ def encuesta_discreta(request, pk, encuesta_id):
 
             pk = int(pk) +1
 
-            if pk <=40:
+            if pk <=60:
                 return HttpResponseRedirect(reverse('encuestas:index',kwargs={'pk': pk}))
             else:
                 return HttpResponseRedirect(reverse('personas.views.fin'))

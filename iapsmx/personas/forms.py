@@ -47,8 +47,8 @@ class PersonaForm(forms.ModelForm):
         (32, 'Zacatecas'),
 
     )
-    estado = forms.ChoiceField(label="Estado", required=True,
-                                 choices=dynamic_choices_estado, help_text="Selecciona tu estado",
+    estado = forms.ChoiceField(label="Estado donde te criaste", required=True,
+                                 choices=dynamic_choices_estado, help_text="Selecciona el estado donde has vivido más tiempo",
                                  widget=forms.Select(attrs={'class': 'form-control'}))
 
     dynamic_choices_gender = (
