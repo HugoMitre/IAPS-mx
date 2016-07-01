@@ -16,6 +16,7 @@ urlpatterns += patterns('',
                         url(r'^encuestas/', include('encuestas.urls', namespace='encuestas')),
                         url(r'^encuestas/discreta/', include('encuestas.urls', namespace='encuesta_discreta')),
                         url(r'^fin/$', 'personas.views.fin'),
+                        url(r'^analysis/',include('analysis.urls', namespace='analysis')),
                         )
 
     #url(r'^admin/', include(admin.site.urls)),

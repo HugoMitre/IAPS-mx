@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'personas',
     'poms',
-    'encuestas'
+    'encuestas',
+    'analysis'
 )
 
 MIDDLEWARE_CLASSES = (
